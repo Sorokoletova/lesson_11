@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>candidates by name</title>
+</head>
+<body>
+<h1>Все кандидаты</h1>
+<h1> Найдено кандидатов {{candidates|length}}</h1>
+{% for candidat in candidates %}
+    <p><a href=http://127.0.0.1:5000/candidate/{{candidat['id']}}">{{candidat["name"]}}</a></p>
+{% endfor %}
+</body>
+</html>
