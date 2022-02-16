@@ -5,8 +5,9 @@ app = Flask(__name__)
 
 @app.route('/',)
 def page_all():
-     candidates = get_candidates_list()
-     return render_template("list.html", candidates=candidates)
+    candidates = get_candidates_list()
+
+    return render_template("list.html", candidates=candidates)
 
 
 @app.route('/candidate/<int:number_id>')
@@ -26,6 +27,7 @@ def page_skill(skill):
 @app.route('/search/<candidate_name>')
 def page_search(candidate_name):
     candidates = get_candidates_by_name(candidate_name)
+
     return render_template("search.html", candidates=candidates)
 
 
